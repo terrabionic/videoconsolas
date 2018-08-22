@@ -1,0 +1,39 @@
+version: "2"
+services:
+  vgdb:
+    container_name: vg_db
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: d35jx_vg
+      MYSQL_USER: vg_user
+      MYSQL_PASSWORD: vgpass
+  vgphpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      container_name: vg_phpmyadmin
+      ports:
+        - "8008:80"
+      links:
+        - vgdb:mysql
+      environment:
+        - PMA_HOST=mysql
+  vgwp:
+    depends_on:
+      - vgdb
+    container_name: vg_wp
+    image: wordpress:latest
+    volumes:
+      - ../wordpress:/var/www/html
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+    ports:
+      - "8080:80"
+    links:
+      - vgdb:mysql
+    environment:
+      WORDPRESS_DB_NAME: d35jx_vg
+      WORDPRESS_DB_HOST: vgdb:3306
+      WORDPRESS_DB_USER: vg_user
+      WORDPRESS_DB_PASSWORD: vgpass
+      WORDPRESS_TABLE_PREFIX: wp_xc3bC_
