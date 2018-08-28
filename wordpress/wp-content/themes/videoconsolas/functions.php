@@ -19,6 +19,18 @@ function themename_custom_logo_setup() {
 }
 add_action('after_setup_theme', 'themename_custom_logo_setup');
 
+/**
+ * Remove web field from comment_form
+ *
+ * @param [array] $fields
+ * @return array
+ */
+function disable_comment_url_field($fields) { 
+    unset($fields['url']);
+    return $fields;
+}
+add_filter('comment_form_default_fields','disable_comment_url_field');
+
 // Add styles and scripts
 if (!function_exists('theme_scripts')) :
 	function theme_scripts() {
