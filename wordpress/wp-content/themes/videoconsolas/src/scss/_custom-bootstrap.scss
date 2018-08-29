@@ -5,7 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
- @import "layouts/wordpress-content";
+ @import "fonts";
 
  @import "functions";
  @import "custom-variables";
@@ -43,3 +43,7 @@
  @import "utilities";
  //@import "print";
  
+ @import "layouts/base";
+ @import "layouts/wordpress-content";
+ @import "layouts/header";
+ @import "layouts/hero";

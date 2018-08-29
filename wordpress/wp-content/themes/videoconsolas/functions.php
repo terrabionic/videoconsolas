@@ -1,6 +1,8 @@
 <?php
 // Add extra functionalities
 require get_template_directory().'/inc/comments-walker.php';
+require get_template_directory().'/inc/filter-main-menu.php';
+
 
 /**
  * Enable custom logo
@@ -9,8 +11,8 @@ require get_template_directory().'/inc/comments-walker.php';
  */
 function themename_custom_logo_setup() {
     $defaults = array(
-        'height'      => 100,
-        'width'       => 400,
+        'height'      => 37,
+        'width'       => 160,
         'flex-height' => true,
         'flex-width'  => true,
         'header-text' => array('site-title', 'site-description'),
