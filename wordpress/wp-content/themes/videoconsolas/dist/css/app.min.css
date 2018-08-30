@@ -2776,7 +2776,7 @@ a img.aligncenter {
   padding: 1em;
   position: absolute;
   text-align: left;
-  top: 70px;
+  top: 69px;
   width: 255px;
   z-index: 9;
 }
@@ -2787,7 +2787,7 @@ a img.aligncenter {
   border-width: 0 7.5px 14px 7.5px;
   content: '';
   height: 0;
-  left: 152.5px;
+  left: 153.5px;
   position: absolute;
   top: -14px;
   width: 0;
@@ -2809,6 +2809,86 @@ a img.aligncenter {
 
 .hero {
   background-color: #FAFAFB;
+  background-image: url(../images/bg-hero-pattern.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 230px;
+  min-height: 230px;
+  padding: 1em;
+  text-align: center;
+}
+
+.hero__sentence {
+  color: #3B6FC4;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.hero__sub-sentence {
+  color: #3DBC9F;
+}
+
+.hero__search-form {
+  border: 5px solid #FAFAFB;
+  display: inline-block;
+  max-width: 710px;
+  width: 100%;
+}
+
+.hero__search-field {
+  background: #BDD63B;
+  background: -webkit-gradient(linear, left top, right top, color-stop(1%, #BDD63B), to(#3DBC9F));
+  background: linear-gradient(to right, #BDD63B 1%, #3DBC9F 100%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 100%;
+}
+
+.hero__search-field:hover {
+  background: #3B6FC4;
+}
+
+.hero__search-input {
+  border: none;
+  height: 40px;
+  min-height: 40px;
+  outline: none;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.hero__search-input::-webkit-input-placeholder {
+  color: #D6D6DB;
+}
+
+.hero__search-input:-ms-input-placeholder {
+  color: #D6D6DB;
+}
+
+.hero__search-input::-ms-input-placeholder {
+  color: #D6D6DB;
+}
+
+.hero__search-input::placeholder {
+  color: #D6D6DB;
+}
+
+.hero__search-btn {
+  background-image: url(../images/search-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  text-indent: -999999px;
+  width: 40px;
 }
 
 @media (min-width: 576px) {
