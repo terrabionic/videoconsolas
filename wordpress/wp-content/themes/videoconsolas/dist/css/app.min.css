@@ -2647,6 +2647,8 @@ a img.aligncenter {
 }
 
 .header__nav-item {
+  height: 70px;
+  line-height: 70px;
   margin-right: 0;
   position: relative;
 }
@@ -2657,7 +2659,7 @@ a img.aligncenter {
 
 .header__nav-item:before {
   background-color: transparent;
-  bottom: 0;
+  bottom: 20px;
   content: '';
   height: 2px;
   left: 0;
@@ -2669,7 +2671,7 @@ a img.aligncenter {
 
 .header__nav-item:after {
   background-color: transparent;
-  bottom: 0;
+  bottom: 20px;
   content: '';
   height: 2px;
   left: 15px;
@@ -2689,6 +2691,27 @@ a img.aligncenter {
 
 .header__nav-item:hover .header__nav-submenu {
   display: block;
+}
+
+.header__nav-item--child {
+  height: auto;
+  line-height: normal;
+}
+
+.header__nav-item--child:not(:first-child) {
+  margin-left: 0;
+}
+
+.header__nav-item--child:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+.header__nav-item--child:before {
+  display: none;
+}
+
+.header__nav-item--child:after {
+  display: none;
 }
 
 .header__nav-link {
@@ -2712,6 +2735,18 @@ a img.aligncenter {
   transform-origin: center center;
 }
 
+.header__nav-link--child {
+  color: #232529;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: unset;
+}
+
+.header__nav-link--child:hover,
+.header__nav-link--child:focus {
+  color: #3DBC9F;
+}
+
 .header__nav-link-arrow {
   border: solid #3DBC9F;
   border-width: 0 2px 2px 0;
@@ -2727,8 +2762,49 @@ a img.aligncenter {
   vertical-align: text-top;
 }
 
+.header__nav-link-dash {
+  color: #3DBC9F;
+}
+
 .header__nav-submenu {
+  background-color: #fff;
+  border: 1px solid #F1F1F3;
+  border-radius: 5px;
   display: none;
+  left: -127px;
+  min-width: 255px;
+  padding: 1em;
+  position: absolute;
+  text-align: left;
+  top: 70px;
+  width: 255px;
+  z-index: 9;
+}
+
+.header__nav-submenu:after {
+  border-color: transparent transparent #fff transparent;
+  border-style: solid;
+  border-width: 0 7.5px 14px 7.5px;
+  content: '';
+  height: 0;
+  left: 152.5px;
+  position: absolute;
+  top: -14px;
+  width: 0;
+  z-index: 10;
+}
+
+.header__nav-submenu:before {
+  border-color: transparent transparent #F1F1F3 transparent;
+  border-style: solid;
+  border-width: 0 9px 16px 9px;
+  content: '';
+  height: 0;
+  left: 152px;
+  position: absolute;
+  top: -16px;
+  width: 0;
+  z-index: 10;
 }
 
 .hero {
