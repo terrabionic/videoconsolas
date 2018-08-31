@@ -1,0 +1,96 @@
+#ez-toc-container {
+    background-color: $gray-lighten !important;
+    border: 1px solid $gray-light !important;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 1em 2em !important;
+
+    .ez-toc-title {
+        color: $secondary-color !important;
+        display: inline-block;
+        font-family: $font-family-secondary;
+        font-size: 24px;
+        margin: 0 0 0.8em 0 !important;
+        position: relative;
+
+        &:before {
+            background-color: $primary-color;
+            bottom: 0;
+            content: '';
+            height: 2px;
+            left: 0;
+            position: absolute;
+            transition: background-color 0.4s;
+            width: 13px;
+        }
+
+        &:after {
+            background-color: $extra-color;
+            bottom: 0;
+            content: '';
+            height: 2px;
+            left: 15px;
+            position: absolute;
+            transition: background-color 0.4s;
+            width: 4px;
+        }
+    }
+
+    .ez-toc-toggle {
+        background-color: $primary-color;
+        background-image: none;
+        border: none;
+        padding: 0.3em 0.5em;
+
+        i {
+            color: $white;
+        }
+    }
+
+    .ez-toc-list {
+        counter-reset: tablecounter;
+
+        li {
+            counter-increment: tablecounter;
+            list-style: none !important;
+            padding-left: 0 !important;
+
+            &:before {
+                content: counter(tablecounter)'. ';
+                color: $primary-color;
+                font-weight: 500;
+            }
+
+            a {
+                color: $primary-color !important;
+                font-weight: 500;
+            }
+
+            ul {
+                counter-reset: tablecounter2;
+                margin: 0;
+                margin-bottom: 0.5em;
+                margin-top: 0.5em;
+
+                li {
+                    counter-increment: tablecounter2;
+                    line-height: 1.2em;
+                    list-style: none !important;
+                    padding: 0 !important;
+
+                    &:before {
+                        content: counter(tablecounter)'.'counter(tablecounter2)' ';
+                        color: $gray-darker !important;
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+
+                    a {
+                        color: $gray-darker !important;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

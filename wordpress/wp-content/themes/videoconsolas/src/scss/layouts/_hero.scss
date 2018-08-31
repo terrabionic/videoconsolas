@@ -32,14 +32,14 @@ $layout: '.hero';
         background: $extra-color;
         //background: -moz-linear-gradient(left, $extra-color 1%, $primary-color 100%);
         //background: -webkit-linear-gradient(left, $extra-color 1%,$primary-color 100%);
-        background: linear-gradient(to right, $extra-color 1%,$primary-color 100%);
+        background: linear-gradient(to right, $extra-color 1%, $primary-color 100%);
         display: flex;
         padding: 2px;
-        transition: all 0.5s;
+        transition: background 250ms linear;
         width: 100%;
 
         &:hover {
-            background: $secondary-color;
+            background: linear-gradient(to right, $secondary-color 1%, $secondary-color 100%);
         }
     }
 
