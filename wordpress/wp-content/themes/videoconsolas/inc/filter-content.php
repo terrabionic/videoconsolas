@@ -14,9 +14,17 @@ function add_class_content_tags($content) {
         return $matches[0];
     }, $content );
 
-    $content = preg_replace_callback('/(<p)(>[^<]*<img[^>]+>[^<]*)(<\/p>)/i', function($matches) {
-        if (!stripos($matches[0], 'class=')) :
+    $content = preg_replace_callback('/(\<p(.*?))\>(.*)(<\/p>)/i', function($matches) {
+        if (stripos($matches[0], '<img')) :
             $matches[0] = $matches[1].$matches[2].' class="content__paragraph content__paragraph--image">'.$matches[3].$matches[4];
+        endif;
+
+        return $matches[0];
+    }, $content );
+
+    $content = preg_replace_callback('/(\<p(.*?))\>(.*)(<\/p>)/i', function($matches) {
+        if (stripos($matches[0], '<iframe')) :
+            $matches[0] = $matches[1].$matches[2].' class="content__paragraph content__paragraph--iframe">'.$matches[3].$matches[4];
         endif;
 
         return $matches[0];

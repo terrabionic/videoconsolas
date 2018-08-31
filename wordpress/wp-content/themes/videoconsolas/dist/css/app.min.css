@@ -2922,6 +2922,26 @@ a img.aligncenter {
   color: #232529;
 }
 
+.content__paragraph--iframe {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.content__paragraph--iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/**
+ * This component styles only works for Easy Table Of Contents WordPress Plugin
+ * URL: https://es.wordpress.org/plugins/easy-table-of-contents/
+ **/
+
 #ez-toc-container {
   background-color: #FAFAFB !important;
   border: 1px solid #F1F1F3 !important;
