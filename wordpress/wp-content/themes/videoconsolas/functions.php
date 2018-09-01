@@ -3,6 +3,7 @@
 require get_template_directory().'/inc/comments-walker.php';
 require get_template_directory().'/inc/filter-main-menu.php';
 require get_template_directory().'/inc/filter-content.php';
+require get_template_directory().'/inc/shortcodes.php';
 
 
 /**

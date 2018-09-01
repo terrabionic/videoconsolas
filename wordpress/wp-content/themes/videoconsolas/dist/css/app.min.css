@@ -3042,6 +3042,64 @@ a img.aligncenter {
   font-size: 16px;
 }
 
+.fun-fact {
+  border: 1px solid #F1F1F3;
+  border-radius: 20px;
+  margin: 0 auto 3em auto;
+  max-width: 620px;
+  width: 100%;
+}
+
+.fun-fact__header {
+  background-color: #FAFAFB;
+  border-bottom: 1px solid #F1F1F3;
+  border-radius: 20px;
+}
+
+.fun-fact__head {
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+  max-width: 420px;
+  width: 100%;
+}
+
+.fun-fact__icon {
+  display: inline-block;
+  height: 32px;
+  margin-right: 0.7em;
+  width: 32px;
+}
+
+.fun-fact__title {
+  color: #3B6FC4;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.fun-fact__title:before {
+  background-color: #F1F1F3;
+  content: '';
+  display: inline-block;
+  height: 35px;
+  left: 0;
+  margin-right: 0.7em;
+  vertical-align: middle;
+  width: 1px;
+}
+
+.fun-fact__content {
+  margin: 0 auto;
+  max-width: 420px;
+  padding: 1em 0 1.5em 0;
+  width: 100%;
+}
+
+.fun-fact__content strong {
+  color: #3DBC9F;
+  font-weight: 500;
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
