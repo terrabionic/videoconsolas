@@ -1,0 +1,126 @@
+$layout: '.footer';
+
+#{$layout} {
+    background-color: $gray-darker;
+
+    &__top {
+        padding: 2.5em 0;
+    }
+
+    &__bottom {
+        background-color: $black-color;
+    }
+
+    &__links-separator {
+        border-bottom: 1px solid $black-color;
+        display: block;
+        margin-bottom: 1.5em;
+    }
+
+    &__links-section-title {
+        color: $white;
+        font-size: 22px;
+        margin-bottom: 1.5em;
+        position: relative;
+
+        &:before {
+            background-color: $primary-color;
+            bottom: -8px;
+            content: '';
+            height: 2px;
+            left: 0;
+            position: absolute;
+            transition: background-color 0.4s;
+            width: 13px;
+        }
+
+        &:after {
+            background-color: $extra-color;
+            bottom: -8px;
+            content: '';
+            height: 2px;
+            left: 15px;
+            position: absolute;
+            transition: background-color 0.4s;
+            width: 4px;
+        }
+    }
+
+    &__links-menu {
+        margin-bottom: 0.5em;
+    }
+
+    &__links-menu-title {
+        color: $white;
+        font-size: 19px;
+        margin-bottom: 0.8em;
+    }
+
+    &__links-menu-link {
+        color: $white;
+        font-size: 18px;
+    }
+
+    &__links-social-link {
+        border: 1px solid $white;
+        color: $white;
+        display: block;
+        font-size: 18px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        transition: all 0.4s;
+        width: 36px;
+
+        &:focus,
+        &:hover {
+            border: 1px solid $primary-color;
+            color: $primary-color;
+        }
+    }
+
+    &__links-subscribe-desc {
+        color: $white;
+    }
+
+    &__links-subscribe-field {
+        background: $extra-color;
+        //background: -moz-linear-gradient(left, $extra-color 1%, $primary-color 100%);
+        //background: -webkit-linear-gradient(left, $extra-color 1%,$primary-color 100%);
+        background: linear-gradient(to right, $extra-color 1%, $primary-color 100%);
+        display: flex;
+        padding: 2px;
+        transition: background 250ms linear;
+        max-width: 432px;
+        width: 100%;
+
+        &:hover {
+            background: linear-gradient(to right, $secondary-color 1%, $secondary-color 100%);
+        }
+    }
+
+    &__links-subscribe-input {
+        border: none;
+        height: 40px;
+        min-height: 40px;
+        outline: none;
+        padding: 0.5em;
+        width: 100%;
+
+        &::placeholder {
+            color: $gray;
+        }
+    }
+
+    &__links-subscribe-btn {
+        background-color: $primary-color;
+        border: 1px solid $white;
+        color: $white;
+        width: 108px;
+
+        &:hover {
+            background-color: $extra-color;
+            cursor: pointer;
+        }
+    }
+}

@@ -6,6 +6,7 @@
  */
 
  @import "fonts";
+ @import "iconfont/fontawesome";
 
  @import "functions";
  @import "custom-variables";
@@ -48,6 +49,7 @@
  @import "layouts/header";
  @import "layouts/hero";
  @import "layouts/content";
+ @import "layouts/footer";
 
  @import "components/table-of-contents";
  @import "components/fun-fact";
