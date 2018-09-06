@@ -7981,6 +7981,39 @@ a img.aligncenter {
   border: 0;
 }
 
+.comments__container {
+  margin: 0 auto;
+  max-width: 890px;
+}
+
+.comments__form-title {
+  color: #232529;
+  font-size: 32px;
+  margin-bottom: 0.5em;
+}
+
+.comments__form-label {
+  color: #3B6FC4;
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.comments__form-field {
+  border: solid 1px #F1F1F3;
+  outline: none;
+  width: 100%;
+}
+
+.comments__form-field--input {
+  height: 40px;
+}
+
+.comments__form-field--textarea {
+  height: 100px;
+}
+
 .footer {
   background-color: #232529;
 }
@@ -8132,6 +8165,25 @@ a img.aligncenter {
 .footer__links-subscribe-btn:hover {
   background-color: #BDD63B;
   cursor: pointer;
+}
+
+.btn {
+  background-color: #3DBC9F;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  font-size: 22px;
+  max-width: 440px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  width: 100%;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #BDD63B;
 }
 
 /**

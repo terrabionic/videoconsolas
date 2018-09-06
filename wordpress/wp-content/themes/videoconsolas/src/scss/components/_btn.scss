@@ -1,0 +1,19 @@
+$component: '.btn';
+
+#{$component} {
+    background-color: $primary-color;
+    border: none;
+    color: $white;
+    cursor: pointer;
+    height: 40px;
+    line-height: 40px;
+    font-size: 22px;
+    max-width: 440px;
+    transition: all 0.4s;
+    width: 100%;
+
+    &:hover,
+    &:focus {
+        background-color: $extra-color;
+    }
+}

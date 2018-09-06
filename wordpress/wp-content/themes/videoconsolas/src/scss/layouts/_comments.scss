@@ -1,0 +1,36 @@
+$layout: '.comments';
+
+#{$layout} {
+    &__container {
+        margin: 0 auto;
+        max-width: 890px;
+    }
+
+    &__form-title {
+        color: $gray-darker;
+        font-size: 32px;
+        margin-bottom: 0.5em;
+    }
+
+    &__form-label {
+        color: $secondary-color;
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+
+    &__form-field {
+        border: solid 1px $gray-light;
+        outline: none;
+        width: 100%;
+
+        &--input {
+            height: 40px;
+        }
+
+        &--textarea {
+            height: 100px;
+        }
+    }
+}
