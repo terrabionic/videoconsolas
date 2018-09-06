@@ -38,7 +38,7 @@ add_filter('nav_menu_submenu_css_class', 'nav_menu_submenu_class', 10, 3);
 function special_nav_class($classes, $item, $args) {
     if (in_array('menu-item', $classes) && 'main-menu' === $args->theme_location && $item->menu_item_parent === '0') {
         $classes[] = 'header__nav-item list-inline-item';
-    } else {
+    } elseif ('main-menu' === $args->theme_location) {
         $classes[] = 'header__nav-item list-unstyled';
     }
 
@@ -65,7 +65,7 @@ add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 3);
 function add_link_atts($atts, $item, $args) {
     if ('main-menu' === $args->theme_location && $item->menu_item_parent === '0') {
         $atts['class'] = "header__nav-link";
-    } else {
+    } elseif ('main-menu' === $args->theme_location) {
         $atts['class'] = "header__nav-link header__nav-link--child";
     }
 

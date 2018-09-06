@@ -8043,6 +8043,13 @@ a img.aligncenter {
 .footer__links-menu-link {
   color: #fff;
   font-size: 18px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.footer__links-menu-link:hover,
+.footer__links-menu-link:focus {
+  color: #3DBC9F;
 }
 
 .footer__links-social-link {
@@ -8117,6 +8124,8 @@ a img.aligncenter {
   background-color: #3DBC9F;
   border: 1px solid #fff;
   color: #fff;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
   width: 108px;
 }
 

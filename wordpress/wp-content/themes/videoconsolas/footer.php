@@ -23,67 +23,37 @@
                                 <h5 class="footer__links-menu-title">
                                     TEMAS
                                 </h5>
-                                <ul class="footer__links-menu list-unstyled">
-                                    <li class="footer__links-menu-item">
-                                        <a href="#" class="footer__links-menu-link">
-                                            Escribe un tema 1
-                                        </a>
-                                    </li>
-                                    <li class="footer__links-menu-item">
-                                        <a href="#" class="footer__links-menu-link">
-                                            Escribe un tema 1
-                                        </a>
-                                    </li>
-                                    <li class="footer__links-menu-item">
-                                        <a href="#" class="footer__links-menu-link">
-                                            Escribe un tema 1
-                                        </a>
-                                    </li>
-                                </ul>
+                                <?php
+                                wp_nav_menu(array(
+                                    'theme_location' => 'footer-menu-1',
+                                    'container' => false,
+                                    'items_wrap' => '<ul class="footer__links-menu list-unstyled">%3$s</ul>', )
+                                );
+                                ?>
                             </div>
                             <div class="col-lg-4">
                                 <h5 class="footer__links-menu-title">
                                     TEMAS
                                 </h5>
-                                <ul class="footer__links-menu list-unstyled">
-                                    <li class="footer__links-menu-item">
-                                        <a href="#" class="footer__links-menu-link">
-                                            Escribe un tema 1
-                                        </a>
-                                    </li>
-                                    <li class="footer__links-menu-item">
-                                        <a href="#" class="footer__links-menu-link">
-                                            Escribe un tema 1
-                                        </a>
-                                    </li>
-                                    <li class="footer__links-menu-item">
-                                        <a href="#" class="footer__links-menu-link">
-                                            Escribe un tema 1
-                                        </a>
-                                    </li>
-                                </ul>
+                                <?php
+                                wp_nav_menu(array(
+                                    'theme_location' => 'footer-menu-2',
+                                    'container' => false,
+                                    'items_wrap' => '<ul class="footer__links-menu list-unstyled">%3$s</ul>', )
+                                );
+                                ?>
                             </div>
                             <div class="col-lg-4">
                                 <h5 class="footer__links-menu-title footer__links-title">
                                     TEMAS
                                 </h5>
-                                <ul class="footer__links-menu list-unstyled">
-                                    <li class="footer__links-menu-item">
-                                        <a href="#" class="footer__links-menu-link">
-                                            Escribe un tema 1
-                                        </a>
-                                    </li>
-                                    <li class="footer__links-menu-item">
-                                        <a href="#" class="footer__links-menu-link">
-                                            Escribe un tema 1
-                                        </a>
-                                    </li>
-                                    <li class="footer__links-menu-item">
-                                        <a href="#" class="footer__links-menu-link">
-                                            Escribe un tema 1
-                                        </a>
-                                    </li>
-                                </ul>
+                                <?php
+                                wp_nav_menu(array(
+                                    'theme_location' => 'footer-menu-3',
+                                    'container' => false,
+                                    'items_wrap' => '<ul class="footer__links-menu list-unstyled">%3$s</ul>', )
+                                );
+                                ?>
                             </div>
                         </div>
                         <hr class="footer__links-separator">
@@ -130,7 +100,7 @@
                                     </p>
                                     <form role="search" method="get" action="<?= home_url('/'); ?>" class="footer__links-subscribe-form">
                                         <div class="footer__links-subscribe-field">
-                                            <input name="s" type="search" class="footer__links-subscribe-input" placeholder="Consolas, videojuegos" value="<?= get_search_query() ?>" title="Consolas, videojuegos" autocomplete="off">
+                                            <input name="s" type="search" class="footer__links-subscribe-input" placeholder="Escríbe tu email" value="<?= get_search_query() ?>" title="Consolas, videojuegos" autocomplete="off">
                                             <button type="submit" class="footer__links-subscribe-btn">Envíar</button>
                                         </div>
                                     </form>

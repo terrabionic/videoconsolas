@@ -59,6 +59,12 @@ $layout: '.footer';
     &__links-menu-link {
         color: $white;
         font-size: 18px;
+        transition: all 0.4s;
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
     }
 
     &__links-social-link {
@@ -116,6 +122,7 @@ $layout: '.footer';
         background-color: $primary-color;
         border: 1px solid $white;
         color: $white;
+        transition: all 0.4s;
         width: 108px;
 
         &:hover {
