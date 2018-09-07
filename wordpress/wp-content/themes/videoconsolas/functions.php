@@ -44,3 +44,17 @@ if (!function_exists('theme_scripts')) :
 	}
 endif;
 add_action('wp_enqueue_scripts', 'theme_scripts');
+
+// Add extra class to reply comment link
+function replace_reply_link_class($class){
+    $class = str_replace("class='comment-reply-link", "class='comments__list-item-reply comment-reply-link", $class);
+    return $class;
+}
+add_filter('comment_reply_link', 'replace_reply_link_class');
+
+// ADD extra class to edit comment link
+function class_edit_post_link($output) {
+    $output = str_replace('class="comment-edit-link"', 'class="comments__list-item-edit comment-edit-link"', $output);
+    return $output;
+}
+add_filter('edit_comment_link', 'class_edit_post_link');

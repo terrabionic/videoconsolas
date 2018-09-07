@@ -6,6 +6,99 @@ $layout: '.comments';
         max-width: 890px;
     }
 
+    &__list-container {
+        margin-bottom: 3em;
+    }
+
+    &__list-title {
+        color: $gray-darker;
+        font-size: 32px;
+        margin-bottom: 1.5em;
+    }
+
+    &__list-item {
+        margin-bottom: 1em;
+        padding-bottom: 1em;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $gray-light;
+        }
+
+        &--parent & {
+            margin-left: 1em;
+            padding-left: 1em;
+        }
+
+        &--parent &:first-child {
+            margin-top: 1em;
+        }
+
+        &--parent &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &__list-item-author-avatar {
+        display: inline-block;
+        margin-bottom: 0.5em;
+        margin-right: 1em;
+    }
+
+    &__list-item-author-name {
+        display: inline-block;
+    }
+
+    &__list-item-author-link {
+        font-weight: 500;
+        transition: all 0.4s;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    &__list-item-date {
+        display: block;
+        margin-bottom: 0.5em;
+    }
+
+    &__list-item-time {
+        transition: all 0.4s;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    &__list-item-edit {
+        transition: all 0.4s;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    &__list-item-reply {
+        transition: all 0.4s;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    &__container-form {
+        margin-bottom: 2em;
+    }
+
+    &__form-logged-link {
+        transition: all 0.4s;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
     &__form-title {
         color: $gray-darker;
         font-size: 32px;
@@ -23,6 +116,7 @@ $layout: '.comments';
     &__form-field {
         border: solid 1px $gray-light;
         outline: none;
+        padding: 0.5em;
         width: 100%;
 
         &--input {

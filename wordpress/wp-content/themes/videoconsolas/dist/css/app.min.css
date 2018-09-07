@@ -7986,6 +7986,104 @@ a img.aligncenter {
   max-width: 890px;
 }
 
+.comments__list-container {
+  margin-bottom: 3em;
+}
+
+.comments__list-title {
+  color: #232529;
+  font-size: 32px;
+  margin-bottom: 1.5em;
+}
+
+.comments__list-item {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+}
+
+.comments__list-item:not(:last-child) {
+  border-bottom: 1px solid #F1F1F3;
+}
+
+.comments__list-item--parent .comments__list-item {
+  margin-left: 1em;
+  padding-left: 1em;
+}
+
+.comments__list-item--parent .comments__list-item:first-child {
+  margin-top: 1em;
+}
+
+.comments__list-item--parent .comments__list-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.comments__list-item-author-avatar {
+  display: inline-block;
+  margin-bottom: 0.5em;
+  margin-right: 1em;
+}
+
+.comments__list-item-author-name {
+  display: inline-block;
+}
+
+.comments__list-item-author-link {
+  font-weight: 500;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.comments__list-item-author-link:hover {
+  color: #3DBC9F;
+}
+
+.comments__list-item-date {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.comments__list-item-time {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.comments__list-item-time:hover {
+  color: #3DBC9F;
+}
+
+.comments__list-item-edit {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.comments__list-item-edit:hover {
+  color: #3DBC9F;
+}
+
+.comments__list-item-reply {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.comments__list-item-reply:hover {
+  color: #3DBC9F;
+}
+
+.comments__container-form {
+  margin-bottom: 2em;
+}
+
+.comments__form-logged-link {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.comments__form-logged-link:hover {
+  color: #3DBC9F;
+}
+
 .comments__form-title {
   color: #232529;
   font-size: 32px;
@@ -8003,6 +8101,7 @@ a img.aligncenter {
 .comments__form-field {
   border: solid 1px #F1F1F3;
   outline: none;
+  padding: 0.5em;
   width: 100%;
 }
 
@@ -8176,6 +8275,7 @@ a img.aligncenter {
   line-height: 40px;
   font-size: 22px;
   max-width: 440px;
+  outline: none;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   width: 100%;
