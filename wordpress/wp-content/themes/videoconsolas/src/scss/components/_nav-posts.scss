@@ -1,0 +1,64 @@
+$component: '.nav-posts';
+
+#{$component} {
+    background-color: $gray-lighten;
+    border: 1px solid $gray-light;
+
+    &__list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        &--right {
+            justify-content: flex-end;
+        }
+    }
+
+    &__btn {
+        border-left: 1px solid $gray-light;
+        border-right: 1px solid $gray-light;
+        margin-right: 0;
+        text-align: center;
+        max-width: 106px;
+        width: 100%;
+    }
+
+    &__btn-link {
+        display: block;
+        font-size: 24px;
+        height: 70px;
+        line-height: 70px;
+        max-width: 106px;
+        transition: all 0.4s;
+        width: 100%;
+
+        &--fb {
+            color: $fb-color;
+
+            &:hover {
+                color: $fb-color;
+            }
+        }
+
+        &--tt {
+            color: $tt-color;
+
+            &:hover {
+                color: $tt-color;
+            }
+        }
+
+        &--gplus {
+            color: $gplus-color;
+
+            &:hover {
+                color: $gplus-color;
+            }
+        }
+
+        &:hover {
+            background-color: $white;
+        }
+    }
+}

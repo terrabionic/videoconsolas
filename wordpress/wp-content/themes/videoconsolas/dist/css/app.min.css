@@ -8575,6 +8575,76 @@ a img.aligncenter {
   background-color: transparent;
 }
 
+.nav-posts {
+  background-color: #FAFAFB;
+  border: 1px solid #F1F1F3;
+}
+
+.nav-posts__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-posts__list--right {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.nav-posts__btn {
+  border-left: 1px solid #F1F1F3;
+  border-right: 1px solid #F1F1F3;
+  margin-right: 0;
+  text-align: center;
+  max-width: 106px;
+  width: 100%;
+}
+
+.nav-posts__btn-link {
+  display: block;
+  font-size: 24px;
+  height: 70px;
+  line-height: 70px;
+  max-width: 106px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  width: 100%;
+}
+
+.nav-posts__btn-link--fb {
+  color: #3b5998;
+}
+
+.nav-posts__btn-link--fb :hover {
+  color: #3b5998;
+}
+
+.nav-posts__btn-link--tt {
+  color: #55acee;
+}
+
+.nav-posts__btn-link--tt:hover {
+  color: #55acee;
+}
+
+.nav-posts__btn-link--gplus {
+  color: #dc4e41;
+}
+
+.nav-posts__btn-link--gplus:hover {
+  color: #dc4e41;
+}
+
+.nav-posts__btn-link:hover {
+  background-color: #fff;
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
