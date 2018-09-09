@@ -36,7 +36,7 @@
 		<!-- Comments closed -->
 		<div class="row">
 			<div class="col-lg-12">
-				<p class="comments__closed"><?php esc_html_e('Comments are closed.', constant('DOMAIN_NAME')); ?></p>
+				<p class="comments__closed"><?php esc_html_e('Los comentarios están cerrados.', constant('DOMAIN_NAME')); ?></p>
 			</div>
 		</div>
 		<!-- End comments closed -->

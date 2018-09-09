@@ -1,0 +1,61 @@
+$component: '.share-post';
+
+#{$component} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2em;
+
+    &__image {
+        margin-bottom: 1em;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__btn {
+        background-color: $secondary-color;
+        color: $white;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        position: relative;
+        transition: all 0.4s;
+        width: 40px;
+
+        &:before {
+            border-top: 10px solid $white;
+            border-right: 10px solid transparent;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &:after {
+            border-bottom: 10px solid $white;
+            border-left: 10px solid transparent;
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        &:hover {
+            background-color: $extra-color;
+            color: $white;
+            text-decoration: none;
+        }
+
+        &--false {
+            background-color: transparent;
+            margin: 0 1em;
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+}

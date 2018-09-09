@@ -68,7 +68,7 @@ class comment_walker extends Walker_Comment {
 					<?php edit_comment_link('<p>'.esc_html_e('Editar este comentario', constant('DOMAIN_NAME')).'</p>','',''); ?>
 
 					<?php if ($comment->comment_approved == '0') : ?>
-						<p class="comments__list-item-moderation">Your comment is awaiting moderation.</p>
+						<p class="comments__list-item-moderation"><?= __('Tu comentario está en espera de moderación.', constant('DOMAIN_NAME')) ?></p>
 					<?php endif; ?>
 				</div>
 				<div class="comments__list-item-text">
