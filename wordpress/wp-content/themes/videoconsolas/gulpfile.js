@@ -16,10 +16,18 @@ var $ = require('gulp-load-plugins')();
 var source = 'src/',
     dest = 'dist/';
 
+var jQuery = {
+    in: '.node_modules/jquery'
+}
+
 // Bootstrap scss source
 var bootstrapSass = {
     in: './node_modules/bootstrap/'
 };
+
+var popper = {
+    in: './node_modules/popper.js/'
+}
 
 var slick = {
     in: './node_modules/slick-carousel/slick/'
@@ -38,9 +46,11 @@ var fonts = {
 };
 
 var jsPaths = [
-    bootstrapSass.in + 'dist/js/bootstrap.js',
-    slick.in + 'slick.js',
-    source + 'js/main.js'
+    jQuery.on + 'dis/jquery.js',
+    popper.in + 'dist/umd/popper.js',
+    bootstrapSass.in + 'js/dis/util.js',
+    bootstrapSass.in + 'js/dist/collapse.js',
+    source + 'js/main.js',
 ];
 
 // css source file: .scss files
@@ -93,7 +103,12 @@ gulp.task('fonts', function () {
 gulp.task('js', function() {
     return gulp.src(jsPaths)
         .pipe(babel({
-            presets: ['es2015'],
+            presets: [['env', {
+                loose: true,
+                modules: false,
+                exclude: ['transform-es2015-typeof-symbol']
+            }]],
+            plugins: ['transform-es2015-modules-strip', '@babel/plugin-proposal-object-rest-spread'],
             compact: false
         }))
         .pipe(concat('main.min.js'))
