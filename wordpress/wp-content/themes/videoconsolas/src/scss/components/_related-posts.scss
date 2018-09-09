@@ -1,0 +1,47 @@
+$component: '.related-posts';
+
+#{$component} {
+    margin-bottom: 4em;
+
+    &__title {
+        font-size: 32px;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+
+    &__article {
+        background-color: $primary-color;
+
+        &--primary {
+            background-color: $primary-color;
+        }
+
+        &--secondary {
+            background-color: $secondary-color;
+        }
+
+        &--extra {
+            background-color: $extra-color;
+        }
+    }
+
+    &__article-link {
+        display: flex;
+
+        &:hover,
+        &:focus {
+            color: $white;
+        }
+    }
+
+    &__article-thumb {
+        height: auto;
+        max-width: 174px;
+        width: 100%;
+    }
+    
+    &__caption {
+        color: $white;
+        padding: 1em 0.5em;
+    }
+}
