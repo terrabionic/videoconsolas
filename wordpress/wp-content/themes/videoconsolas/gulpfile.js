@@ -17,7 +17,7 @@ var source = 'src/',
     dest = 'dist/';
 
 var jQuery = {
-    in: '.node_modules/jquery'
+    in: './node_modules/jquery/'
 }
 
 // Bootstrap scss source
@@ -46,9 +46,9 @@ var fonts = {
 };
 
 var jsPaths = [
-    jQuery.on + 'dis/jquery.js',
+    jQuery.in + 'dist/jquery.js',
     popper.in + 'dist/umd/popper.js',
-    bootstrapSass.in + 'js/dis/util.js',
+    bootstrapSass.in + 'js/dist/util.js',
     bootstrapSass.in + 'js/dist/collapse.js',
     source + 'js/main.js',
 ];

@@ -7,6 +7,9 @@ require get_template_directory().'/inc/filter-footer-menu.php';
 require get_template_directory().'/inc/filter-content.php';
 require get_template_directory().'/inc/shortcodes.php';
 
+//Add title tag
+add_theme_support('title-tag');
+
 //Remove JQuery migrate
 function remove_jquery_migrate( $scripts ) {
     if ( ! is_admin() && isset( $scripts->registered['jquery'] ) ) {

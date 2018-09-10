@@ -3,7 +3,7 @@
 $cat = get_the_category();
 
 $args = array (
-    'cat' => $cat->slug,
+    'category_name' => $cat->slug,
     'post__not_in' => array(get_the_ID()),
     'posts_per_page' => '3',
     'meta_key' => '_thumbnail_id',
