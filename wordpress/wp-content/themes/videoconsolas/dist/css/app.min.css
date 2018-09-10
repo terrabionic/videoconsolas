@@ -8121,10 +8121,6 @@ a img.aligncenter {
   padding: 2.5em 0;
 }
 
-.footer__bottom {
-  background-color: #131417;
-}
-
 .footer__links-separator {
   border-bottom: 1px solid #131417;
   display: block;
@@ -8264,6 +8260,18 @@ a img.aligncenter {
 .footer__links-subscribe-btn:hover {
   background-color: #BDD63B;
   cursor: pointer;
+}
+
+.footer__bottom {
+  background-color: #131417;
+}
+
+.footer__bottom-text {
+  color: #fff;
+  font-size: 14px;
+  line-height: 40px;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 .btn {
@@ -8447,6 +8455,61 @@ a img.aligncenter {
 .fun-fact__content strong {
   color: #3DBC9F;
   font-weight: 500;
+}
+
+.share-buttons {
+  margin-bottom: 2em;
+}
+
+.share-buttons__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.share-buttons__item {
+  background-color: #3DBC9F;
+  height: 24px;
+  line-height: 24px;
+  max-width: 24px;
+  text-align: center;
+  width: 100%;
+}
+
+.share-buttons__item:not(:last-child) {
+  margin-right: 1em;
+}
+
+.share-buttons__item:hover,
+.share-buttons__item:focus {
+  background-color: #3DBC9F;
+}
+
+.share-buttons__item--fb {
+  background-color: #3b5998;
+}
+
+.share-buttons__item--tt {
+  background-color: #55acee;
+}
+
+.share-buttons__item--gplus {
+  background-color: #dc4e41;
+}
+
+.share-buttons__item-link {
+  color: #fff;
+  display: block;
+  font-size: 12px;
+  line-height: 26px;
+}
+
+.share-buttons__item-link:hover,
+.share-buttons__item-link:focus {
+  color: #fff;
 }
 
 .related-posts {
@@ -8656,6 +8719,48 @@ a img.aligncenter {
 
 .nav-posts__btn-link:hover {
   background-color: #fff;
+}
+
+.tags__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.tags__item {
+  background-color: #3DBC9F;
+  border-radius: 18px;
+}
+
+.tags__item--primary {
+  background-color: #3DBC9F;
+}
+
+.tags__item--secondary {
+  background-color: #3B6FC4;
+}
+
+.tags__item--extra {
+  background-color: #BDD63B;
+}
+
+.tags__item:not(:last-child) {
+  margin-right: 0.5em;
+}
+
+.tags__item-link {
+  color: #fff;
+  font-size: 12px;
+  padding: 0 1em;
+  text-align: center;
+}
+
+.tags__item-link:hover,
+.tags__item-link:focus {
+  color: #fff;
 }
 
 @media (min-width: 576px) {

@@ -116,9 +116,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <p class="footer__bottom-text">
-                            <small>
-                                Consolas Videojuegos copyright 2018
-                            </small>
+                            Consolas Videojuegos copyright <?= date('Y'); ?>
                         </p>
                     </div>
                 </div>

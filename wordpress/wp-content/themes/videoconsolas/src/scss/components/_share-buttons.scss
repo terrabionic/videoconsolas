@@ -1,0 +1,53 @@
+$component: '.share-buttons';
+
+#{$component} {
+    margin-bottom: 2em;
+
+    &__list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+
+    &__item {
+        background-color: $primary-color;
+        height: 24px;
+        line-height: 24px;
+        max-width: 24px;
+        text-align: center;
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-right: 1em;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $primary-color;
+        }
+
+        &--fb {
+            background-color: $fb-color;
+        }
+
+        &--tt {
+            background-color: $tt-color;
+        }
+
+        &--gplus {
+            background-color: $gplus-color;
+        }
+    }
+
+    &__item-link {
+        color: $white;
+        display: block;
+        font-size: 12px;
+        line-height: 26px;
+
+        &:hover,
+        &:focus {
+            color: $white;
+        }
+    }
+}

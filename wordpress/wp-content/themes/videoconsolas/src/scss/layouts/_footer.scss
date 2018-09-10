@@ -7,10 +7,6 @@ $layout: '.footer';
         padding: 2.5em 0;
     }
 
-    &__bottom {
-        background-color: $black-color;
-    }
-
     &__links-separator {
         border-bottom: 1px solid $black-color;
         display: block;
@@ -129,5 +125,17 @@ $layout: '.footer';
             background-color: $extra-color;
             cursor: pointer;
         }
+    }
+
+    &__bottom {
+        background-color: $black-color;
+    }
+
+    &__bottom-text {
+        color: $white;
+        font-size: 14px;
+        line-height: 40px;
+        margin-bottom: 0;
+        text-align: center;
     }
 }

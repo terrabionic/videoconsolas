@@ -7,6 +7,11 @@
                         <h1 class="content__entry-title">
                             <?php the_title(); ?>
                         </h1>
+
+                        <?php get_template_part('template-parts/tags-section'); ?>
+
+                        <?php get_template_part('template-parts/share-buttons-section'); ?>                        
+
                         <div class="content__entry-body">
                             <?php the_content(); ?>
                         </div>

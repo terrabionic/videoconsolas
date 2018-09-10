@@ -1,0 +1,42 @@
+$component: '.tags';
+
+#{$component} {
+    &__list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+
+    &__item {
+        background-color: $primary-color;
+        border-radius: 18px;
+
+        &--primary {
+            background-color: $primary-color;
+        }
+
+        &--secondary {
+            background-color: $secondary-color;
+        }
+
+        &--extra {
+            background-color: $extra-color;
+        }
+
+        &:not(:last-child) {
+            margin-right: 0.5em;
+        }
+    }
+
+    &__item-link {
+        color: $white;
+        font-size: 12px;
+        padding: 0 1em;
+        text-align: center;
+
+        &:hover,
+        &:focus {
+            color: $white;
+        }
+    }
+}
