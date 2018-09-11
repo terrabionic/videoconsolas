@@ -12,7 +12,7 @@ function add_class_content_tags($content) {
         endif;
 
         return $matches[0];
-    }, $content );
+    }, $content);
 
     $content = preg_replace_callback('/(\<p(.*?))\>(.*)(<\/p>)/i', function($matches) {
         if (stripos($matches[0], '<img')) :
@@ -20,7 +20,7 @@ function add_class_content_tags($content) {
         endif;
 
         return $matches[0];
-    }, $content );
+    }, $content);
 
     $content = preg_replace_callback('/(\<p(.*?))\>(.*)(<\/p>)/i', function($matches) {
         if (stripos($matches[0], '<iframe')) :
@@ -28,7 +28,7 @@ function add_class_content_tags($content) {
         endif;
 
         return $matches[0];
-    }, $content );
+    }, $content);
 
     $content = preg_replace_callback('/(\<p(.*?))\>(.*)(<\/p>)/i', function($matches) {
         if (!stripos($matches[0], 'class=')) :
@@ -36,7 +36,31 @@ function add_class_content_tags($content) {
         endif;
 
         return $matches[0];
-    }, $content );
+    }, $content);
+    
+    $content = preg_replace_callback('/(\<ul(.*?))\>([\w\W]*?)(<\/ul>)/i', function($matches) {
+        if (!stripos($matches[0], 'class=')) :
+            $matches[0] = $matches[1].$matches[2].' class="content__list content__list--bullets">'.$matches[3].$matches[4];
+        endif;
+
+        return $matches[0];
+    }, $content);
+    
+    $content = preg_replace_callback('/(\<ol(.*?))\>([\w\W]*?)(<\/ol>)/i', function($matches) {
+        if (!stripos($matches[0], 'class=')) :
+            $matches[0] = $matches[1].$matches[2].' class="content__list content__list--numbers">'.$matches[3].$matches[4];
+        endif;
+
+        return $matches[0];
+    }, $content);
+
+    $content = preg_replace_callback('/(\<li(.*?))\>(.*)(<\/li>)/i', function($matches) {
+        if (!stripos($matches[0], 'class=')) :
+            $matches[0] = $matches[1].$matches[2].' class="content__list-item">'.$matches[3].$matches[4];
+        endif;
+
+        return $matches[0];
+    }, $content);
 
     return $content;
 }

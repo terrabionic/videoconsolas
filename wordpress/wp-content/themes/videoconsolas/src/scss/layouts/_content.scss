@@ -1,7 +1,7 @@
 $layout: '.content';
 
 #{$layout} {
-    padding: 2em 0;
+    padding-bottom: 2em;
 
     &__container {
         margin: 0 auto;
@@ -39,5 +39,41 @@ $layout: '.content';
                 border: 0;
             }
         }
+    }
+
+    &__list {
+        list-style: none;
+        margin-bottom: 2em;
+
+        &--bullets {
+            #{$layout}__list-item {
+                &:before {
+                    color: $primary-color;
+                    content: '-';
+                    left: -0.5em;
+                    position: absolute;
+                }
+            }
+        }
+
+        &--numbers {
+            counter-reset: number-counter;
+
+            #{$layout}__list-item {
+                counter-increment: number-counter;
+
+                &:before {
+                    color: $primary-color;
+                    content: counter(number-counter)'.';
+                    left: -0.8em;
+                    position: absolute;
+                }
+            }
+        }
+    }
+
+    &__list-item {
+        margin-bottom: 1em;
+        position: relative;
     }
 }

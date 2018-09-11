@@ -6,6 +6,7 @@ require get_template_directory().'/inc/filter-main-menu.php';
 require get_template_directory().'/inc/filter-footer-menu.php';
 require get_template_directory().'/inc/filter-content.php';
 require get_template_directory().'/inc/shortcodes.php';
+require get_template_directory().'/inc/widgets/main-widgets.php';
 
 //Add title tag
 add_theme_support('title-tag');
@@ -87,3 +88,8 @@ function class_edit_post_link($output) {
     return $output;
 }
 add_filter('edit_comment_link', 'class_edit_post_link');
+
+// ACF Options page
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();	
+}

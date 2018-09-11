@@ -2,6 +2,8 @@
 
 <?php get_template_part('template-parts/hero-section'); ?>
 
+    <?php get_template_part('template-parts/banner-content-section'); ?>
+
     <!-- Content -->
     <?php while (have_posts()) : the_post(); ?>
     <main  <?php post_class('content'); ?>>
