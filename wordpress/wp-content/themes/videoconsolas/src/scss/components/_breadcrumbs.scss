@@ -1,0 +1,60 @@
+$component: '.breadcrumbs';
+
+#{$component} {
+    display: flex;
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: left;
+
+    &__item {
+        font-weight: 500;
+        margin: 0 1em;
+        position: relative;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &--current {
+            color: $primary-color;
+            text-decoration: underline;
+        }
+
+        &:not(:last-child) {
+            &:after {
+                border-right: 1px solid $primary-color;
+                content: '';
+                position: absolute;
+                height: 14px;
+                right: -1em;
+                top: 0.3em;
+                width: 1px;
+            }
+        }
+    }
+
+    &__main-item {
+        color: $secondary-color;
+        margin-right: 0.5em;
+    }
+
+    &__item a,
+    &__item-link {
+        color: $gray-darken;
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+
+        &--disable {
+            color: $gray-darken;
+
+            &:hover,
+            &:focus {
+                color: $gray-darken;
+            }
+        }
+    }
+}

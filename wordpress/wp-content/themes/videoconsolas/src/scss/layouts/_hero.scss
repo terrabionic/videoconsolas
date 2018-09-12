@@ -3,7 +3,7 @@ $layout: '.hero';
 #{$layout} {
     background-color: $gray-lighten;
     background-image: url(../images/bg-hero-pattern.svg);
-    background-position: center;
+    background-position: center 20%;
     background-repeat: no-repeat;
     background-size: cover;
     height: 230px;
