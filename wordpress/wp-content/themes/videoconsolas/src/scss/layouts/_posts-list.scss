@@ -1,6 +1,37 @@
 $layout: '.posts-list';
 
 #{$layout} {
+
+    &__switch-buttons {
+        margin-bottom: 1.5em;
+    }
+
+    &__switch-divider {
+        border-top: 1px solid $gray-light;
+        margin-bottom: 2em;
+        margin-top: 0;
+    }
+
+    &__switch-layout {
+        background: transparent;
+        border: none;
+        cursor:  pointer;
+        fill: $secondary-color;
+        height: 36px;
+        outline: none;
+        padding: 6px;
+        transition: all 0.4s;
+        width: 36px;
+
+        &--active {
+            fill: $primary-color;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
     &__container {
         display: flex;
         justify-content: space-between;
@@ -13,6 +44,7 @@ $layout: '.posts-list';
         border-radius: 5px;
         margin-bottom: 2em;
         overflow: hidden;
+        transition: all 0.4s;
         width: 48.5%;
 
         &--large {
