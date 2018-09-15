@@ -29,7 +29,7 @@
             <div class="col-lg-8 order-first">
                 <?php get_template_part('template-parts/banner-content-section'); ?>
                 <div class="posts-list__container">
-                <?php while (have_posts()) : the_post(); ?>
+                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <article class="posts-list__entry">
                     <a href="<?= esc_url( get_permalink() ); ?>" class="posts-list__entry-image">
                         <?php
@@ -65,7 +65,24 @@
                         </div>
                     </div>
                 </article>
-                <?php endwhile; ?>
+                <?php endwhile; endif; ?>
+                </div>
+                <div class="posts-list__nav">
+                    <div class="posts-list__nav-btn posts-list__nav-btn--left">
+                        <?= get_previous_posts_link('<img src="'.get_template_directory_uri().'/dist/images/arrow-previous.svg" alt="" class="nav-posts__btn-icon" />'); ?>
+                    </div>
+                    <div class="posts-list__nav-count">
+                        <?php
+                            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                            $total_post_count = wp_count_posts();
+                            $published_post_count = $total_post_count->publish;
+                            $total_pages = ceil( $published_post_count / $posts_per_page );
+                        ?>
+                        <?= $paged.esc_html(' de ', constant('DOMAIN_NAME')).$total_pages; ?>
+                    </div>
+                    <div class="posts-list__nav-btn posts-list__nav-btn--right">
+                        <?= get_next_posts_link('<img src="'.get_template_directory_uri().'/dist/images/arrow-next.svg" alt="" class="nav-posts__btn-icon" />'); ?>
+                    </div>
                 </div>
             </div>
         </div>
