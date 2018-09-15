@@ -67,6 +67,9 @@ $layout: '.posts-list';
     }
 
     &__entry-caption {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         padding: 1em;
     }
 
@@ -91,8 +94,19 @@ $layout: '.posts-list';
         font-weight: 500;
     }
 
+    &__entry-separator {
+        border-top: 1px solid $gray-light;
+    }
+
     &__entry-share {
-        padding: 1em;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    &__entry-share-separator {
+        border-left: 1px solid $gray-light;
+        padding-left: 0.5em;
     }
 
     &__entry-share-label {
