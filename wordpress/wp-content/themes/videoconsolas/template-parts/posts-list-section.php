@@ -40,7 +40,9 @@
                     </a>
                     <div class="posts-list__entry-caption">
                         <div>
-                            <?php the_title( '<h3 class="posts-list__entry-title">', '</h3>' ); ?>
+                            <h3 class="posts-list__entry-title">
+                                <?php the_title('<a href="'.get_the_permalink().'" class="posts-list__entry-title-link" title="'.get_the_title().'">', '</a>'); ?>
+                            </h3>
                             <div class="posts-list__entry-meta">
                                 <p class="posts-list__entry-author"><span><?= esc_html('Por: ', constant('DOMAIN_NAME')); ?></span><?php the_author(); ?></p>
                                 <p class="posts-list__entry-date"><?= ucwords(get_the_date('j-F-Y'), '-'); ?></p>

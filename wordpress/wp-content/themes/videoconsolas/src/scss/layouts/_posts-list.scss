@@ -42,6 +42,8 @@ $layout: '.posts-list';
         background-color: $gray-lighten;
         border: 1px solid $gray-light;
         border-radius: 5px;
+        display: flex;
+        flex-direction: column;
         margin-bottom: 2em;
         overflow: hidden;
         transition: all 0.4s;
@@ -75,6 +77,16 @@ $layout: '.posts-list';
 
     &__entry-title {
         font-size: 22px;
+    }
+
+    &__entry-title-link {
+        color: $black-color;
+        transition: all 0.4s;
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
     }
 
     &__entry-meta {
