@@ -7942,8 +7942,21 @@ a img.aligncenter {
   width: 40px;
 }
 
-.posts-list__switch-buttons {
+.posts-list__header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   margin-bottom: 1.5em;
+}
+
+.posts-list__title {
+  line-height: 1.5em;
+  margin-bottom: 0;
+}
+
+.posts-list__switch-buttons {
+  margin-right: 1.5em;
 }
 
 .posts-list__switch-divider {

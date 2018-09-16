@@ -12,7 +12,7 @@
                             <div class="col-lg-12">
                                 <div class="footer__links-section">
                                     <h4 class="footer__links-section-title">
-                                        QUICKLINKS
+                                        <?= esc_html__('QUICKLINKS', constant('DOMAIN_NAME')); ?>
                                     </h4>
                                     <hr class="footer__links-separator">
                                 </div>
@@ -21,7 +21,7 @@
                         <div class="row">
                             <div class="col-lg-4">
                                 <h5 class="footer__links-menu-title">
-                                    TEMAS
+                                    <?= esc_html__('TEMAS', constant('DOMAIN_NAME')); ?>
                                 </h5>
                                 <?php
                                 wp_nav_menu(array(
@@ -33,7 +33,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <h5 class="footer__links-menu-title">
-                                    TEMAS
+                                    <?= esc_html__('NOSOTROS', constant('DOMAIN_NAME')); ?>
                                 </h5>
                                 <?php
                                 wp_nav_menu(array(
@@ -45,7 +45,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <h5 class="footer__links-menu-title footer__links-title">
-                                    TEMAS
+                                    <?= esc_html__('AYUDA', constant('DOMAIN_NAME')); ?>
                                 </h5>
                                 <?php
                                 wp_nav_menu(array(
@@ -60,7 +60,7 @@
                         <div class="row">
                             <div class="col-lg-4">
                                 <h4 class="footer__links-section-title">
-                                    SÍGUENOS
+                                    <?= esc_html__('SÍGUENOS', constant('DOMAIN_NAME')); ?>
                                 </h4>
                                 <ul class="footer__links-social list-inline">
                                     <li class="footer__links-social-item list-inline-item">
@@ -92,11 +92,11 @@
                             </div>
                             <div class="col-lg-8">
                                 <h4 class="footer__links-section-title">
-                                    Unete a la comunidad
+                                    <?= esc_html__('Unete a la comunidad', constant('DOMAIN_NAME')); ?>
                                 </h4>
                                 <div class="footer__links-subscribe">
                                     <p class="footer__links-subscribe-desc">
-                                        Entérate de lo último en todo lo relacionado el mundo gamer.
+                                        <?= esc_html__('Entérate de lo último en todo lo relacionado el mundo gamer.', constant('DOMAIN_NAME')); ?>
                                     </p>
                                     <form role="search" method="get" action="<?= home_url('/'); ?>" class="footer__links-subscribe-form">
                                         <div class="footer__links-subscribe-field">
@@ -116,7 +116,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <p class="footer__bottom-text">
-                            Consolas Videojuegos copyright <?= date('Y'); ?>
+                            <?= bloginfo('name'); ?> <?= date('Y'); ?>
                         </p>
                     </div>
                 </div>

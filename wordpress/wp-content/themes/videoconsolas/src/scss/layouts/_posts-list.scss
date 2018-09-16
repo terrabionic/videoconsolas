@@ -1,9 +1,18 @@
 $layout: '.posts-list';
 
 #{$layout} {
+    &__header {
+        display: flex;
+        margin-bottom: 1.5em;
+    }
+
+    &__title {
+        line-height: 1.5em;
+        margin-bottom: 0;
+    }
 
     &__switch-buttons {
-        margin-bottom: 1.5em;
+        margin-right: 1.5em;
     }
 
     &__switch-divider {
