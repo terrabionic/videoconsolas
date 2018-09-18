@@ -29,6 +29,13 @@
             <?php the_title(); ?>
         </span>
     </li>
+    <?php elseif (is_404()) : ?>
+    </li>
+    <li class="breadcrumbs__item breadcrumbs__item--current">
+        <span class="breadcrumbs__item-text">
+            404
+        </span>
+    </li>
     <?php elseif (is_search()) : ?>
     <li class="breadcrumbs__item breadcrumbs__item--current">
         <span class="breadcrumbs__item-text">

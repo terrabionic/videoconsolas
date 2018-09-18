@@ -10,7 +10,7 @@
 </section>
 <!-- Hero -->
 <section class="hero404">
-    <div class="hero404__space"></div>
+    <img src="<?= get_template_directory_uri(); ?>/dist/images/404-image@3x.png" class="hero404__space">
     <div class="hero404__search">
         <div class="container">
             <div class="row">
@@ -37,28 +37,13 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <ul class="e404__posts-list">
-                    <li class="e404__posts-item">
-                        <a href="" class="e404__posts-link">
-                            Top 5: Conoce las mejores consolas de videojuegos
-                        </a>
-                    </li>
-                    <li class="e404__posts-item">
-                        <a href="" class="e404__posts-link">
-                            Top 5: Conoce las mejores consolas de videojuegos
-                        </a>
-                    </li>
-                    <li class="e404__posts-item">
-                        <a href="" class="e404__posts-link">
-                            Top 5: Conoce las mejores consolas de videojuegos
-                        </a>
-                    </li>
-                    <li class="e404__posts-item">
-                        <a href="" class="e404__posts-link">
-                            Top 5: Conoce las mejores consolas de videojuegos
-                        </a>
-                    </li>
-                </ul>
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'must-see-404',
+                    'container' => false,
+                    'items_wrap' => '<ul class="e404__posts-list">%3$s</ul>', )
+                );
+                ?>
             </div>
         </div>
     </div>
