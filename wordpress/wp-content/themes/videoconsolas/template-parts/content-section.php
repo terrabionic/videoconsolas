@@ -8,9 +8,12 @@
                             <?php the_title(); ?>
                         </h1>
 
-                        <?php get_template_part('template-parts/tags-section'); ?>
-
-                        <?php get_template_part('template-parts/share-buttons-section'); ?>                        
+                        <?php
+                        if (!is_page_template('page-privacy.php')) {
+                            get_template_part('template-parts/tags-section');
+                            get_template_part('template-parts/share-buttons-section');
+                        }
+                        ?>
 
                         <div class="content__entry-body">
                             <?php the_content(); ?>
@@ -21,6 +24,7 @@
             </div>
             <!-- End the content -->
 
+            <?php if (!is_page_template('page-privacy.php')) : ?>
             <!-- Share this -->
             <div class="row">
                 <div class="col-lg-12">
@@ -39,3 +43,4 @@
                 </div>
             </div>
             <!-- End share this -->
+            <?php endif; ?>

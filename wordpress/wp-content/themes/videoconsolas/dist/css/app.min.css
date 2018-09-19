@@ -8764,6 +8764,11 @@ a img.aligncenter {
   color: #3DBC9F;
 }
 
+.privacy__breadcrumbs {
+  margin-bottom: 2.5em;
+  padding: 0.5em 0;
+}
+
 .btn {
   background-color: #3DBC9F;
   border: none;
