@@ -9,6 +9,7 @@ require get_template_directory().'/inc/shortcodes.php';
 require get_template_directory().'/inc/widgets/main-widgets.php';
 require get_template_directory().'/inc/filter-must-see-menu.php';
 require get_template_directory().'/inc/filter-must-see-404.php';
+require get_template_directory().'/inc/filter-sitemap-menu.php';
 
 //Add title tag
 add_theme_support('title-tag');

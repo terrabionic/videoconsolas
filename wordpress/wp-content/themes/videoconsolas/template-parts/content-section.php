@@ -9,7 +9,7 @@
                         </h1>
 
                         <?php
-                        if (!is_page_template('page-privacy.php')) {
+                        if (!is_page_template('page-privacy.php') && !is_page_template('page-sitemap.php')) {
                             get_template_part('template-parts/tags-section');
                             get_template_part('template-parts/share-buttons-section');
                         }
@@ -24,7 +24,7 @@
             </div>
             <!-- End the content -->
 
-            <?php if (!is_page_template('page-privacy.php')) : ?>
+            <?php if (!is_page_template('page-privacy.php') && !is_page_template('page-sitemap.php')) : ?>
             <!-- Share this -->
             <div class="row">
                 <div class="col-lg-12">
