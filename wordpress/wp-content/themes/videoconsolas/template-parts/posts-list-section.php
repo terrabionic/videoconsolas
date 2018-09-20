@@ -2,7 +2,7 @@
 <section class="posts-list">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-8 col-md-8">
                 <div class="posts-list__header">
                     <div class="posts-list__switch-buttons">
                         <button class="posts-list__switch-layout posts-list__switch-layout--active posts-list__switch-layout--grid">
@@ -34,10 +34,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 order-last">
+            <div class="col-lg-4 col-md-4 order-last">
                 <?php get_template_part('template-parts/sidebar-section'); ?>
             </div>
-            <div class="col-lg-8 order-first">
+            <div class="col-lg-8 col-md-8 order-first">
                 <?php get_template_part('template-parts/banner-content-section'); ?>
                 <div class="posts-list__container">
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

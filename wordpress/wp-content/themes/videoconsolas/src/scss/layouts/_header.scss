@@ -5,6 +5,58 @@ $layout: '.header';
     border-bottom: 1px solid $gray-light;
     height: 70px;
 
+    &__burger-btn {
+        border: none;
+        background: transparent;
+        float: right;
+        outline: none;
+        padding: 0;
+
+        &--opened {
+            #{$layout}__burger-line {
+                display: none;
+            }
+
+            #{$layout}__burger-line:first-child {
+                display: block;
+                top: 4px;
+                transform-origin: center center;
+                transform: rotate(45deg);
+            }
+
+            #{$layout}__burger-line:last-child {
+                background-color: $gray;
+                display: block;
+                max-width: 30px;
+                top: -5px;
+                transform-origin: center center;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &__burger-line {
+        background-color: $gray;
+        display: block;
+        height: 4px;
+        position: relative;
+        transition: all 0.4s;
+        width: 30px;
+
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+
+        &--primary {
+            background-color: $primary-color;
+        }
+
+        &--secondary {
+            background-color: $secondary-color;
+            max-width: 25px;
+        }
+    }
+
     &__nav {
         text-align: right;
     }

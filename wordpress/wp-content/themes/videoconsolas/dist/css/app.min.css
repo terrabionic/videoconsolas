@@ -7687,6 +7687,65 @@ a img.aligncenter {
   height: 70px;
 }
 
+.header__burger-btn {
+  border: none;
+  background: transparent;
+  float: right;
+  outline: none;
+  padding: 0;
+}
+
+.header__burger-btn--opened .header__burger-line {
+  display: none;
+}
+
+.header__burger-btn--opened .header__burger-line:first-child {
+  display: block;
+  top: 4px;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.header__burger-btn--opened .header__burger-line:last-child {
+  background-color: #D6D6DB;
+  display: block;
+  max-width: 30px;
+  top: -5px;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.header__burger-line {
+  background-color: #D6D6DB;
+  display: block;
+  height: 4px;
+  position: relative;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  width: 30px;
+}
+
+.header__burger-line:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.header__burger-line--primary {
+  background-color: #3DBC9F;
+}
+
+.header__burger-line--secondary {
+  background-color: #3B6FC4;
+  max-width: 25px;
+}
+
 .header__nav {
   text-align: right;
 }
@@ -7858,7 +7917,7 @@ a img.aligncenter {
 
 .hero {
   background-color: #FAFAFB;
-  background-image: url(../images/bg-hero-pattern.jpg);
+  background-image: url(../images/consola-de-videojuegos.jpg);
   background-position: center 20%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -7906,7 +7965,11 @@ a img.aligncenter {
 }
 
 .hero__search-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: none;
+  border-radius: 0;
   height: 40px;
   min-height: 40px;
   outline: none;
@@ -7931,6 +7994,7 @@ a img.aligncenter {
 }
 
 .hero__search-btn {
+  background-color: #fff;
   background-image: url(../images/search-icon.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -8825,6 +8889,129 @@ a img.aligncenter {
 .sitemap__menu-link:hover,
 .sitemap__menu-link:focus {
   color: #3DBC9F;
+}
+
+.mobile-menu {
+  background-color: #3B6FC4;
+  height: calc(100vh - 70px);
+  left: -370px;
+  max-height: 100%;
+  max-width: 370px;
+  position: fixed;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  top: 70px;
+  width: 100vw;
+  z-index: 9;
+}
+
+.mobile-menu--opened {
+  left: 0;
+}
+
+.mobile-menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0.2em;
+}
+
+.mobile-menu__item {
+  border-bottom: 1px solid #4a86e8;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 1em 0;
+  position: relative;
+}
+
+.mobile-menu__item:before {
+  background-color: #3DBC9F;
+  top: 2.5em;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  width: 13px;
+  z-index: 10;
+}
+
+.mobile-menu__item:after {
+  background-color: #BDD63B;
+  top: 2.5em;
+  content: '';
+  height: 2px;
+  left: 15px;
+  position: absolute;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  width: 4px;
+  z-index: 10;
+}
+
+.mobile-menu__item ul {
+  list-style: none;
+  margin: 0;
+  margin-top: 1em;
+  margin-bottom: 0;
+  padding: 0 0 0 0.5em;
+  width: 100%;
+}
+
+.mobile-menu__item ul:before {
+  color: #3DBC9F;
+  content: '+';
+  font-size: 2.5em;
+  font-weight: 400;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  top: 2px;
+}
+
+.mobile-menu__item ul li {
+  margin-bottom: 0.5em;
+  position: relative;
+}
+
+.mobile-menu__item ul li:before {
+  color: #fff;
+  content: '-';
+  left: -0.5em;
+  position: absolute;
+}
+
+.mobile-menu__item ul li a {
+  color: #fff;
+  font-size: 18px;
+}
+
+.mobile-menu__item ul li a:focus,
+.mobile-menu__item ul li a:active,
+.mobile-menu__item ul li a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.mobile-menu__item--opened ul:before {
+  color: #fff;
+  content: '–';
+}
+
+.mobile-menu__link {
+  color: #fff;
+  font-size: 19px;
+}
+
+.mobile-menu__link:focus,
+.mobile-menu__link:active,
+.mobile-menu__link:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
 .btn {
@@ -12962,6 +13149,12 @@ a img.aligncenter {
 
   .table-responsive-sm > .table-bordered {
     border: 0;
+  }
+}
+
+@media (max-width: 34.99em) {
+  .hero {
+    padding: 1em 0;
   }
 }
 

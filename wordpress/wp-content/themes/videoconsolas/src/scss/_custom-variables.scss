@@ -3,6 +3,14 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
+// ------ Breakpoints -------
+$mq-breakpoints: (
+    mobile:  560px,
+    tablet:  768px,
+    desktop: 980px,
+    wide:    1300px
+);
+
 
 //
 // ------ Colors for the theme -------------
@@ -17,6 +25,7 @@ $black-color:     #131417 !default;
 $primary-color:    #3DBC9F !default;
 $secondary-color:       #3B6FC4 !default;
 $extra-color:      #BDD63B !default;
+$extra-color2:       #4a86e8 !default;
 
 $fb-color: #3b5998;
 $tt-color: #55acee;
