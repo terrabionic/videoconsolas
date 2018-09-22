@@ -3,11 +3,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <?php get_template_part('template-parts/breadcrumbs-section'); ?>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
                     <p class="hero__sentence">Tagline / <span class="hero__sub-sentence">slogan</span></p>
                 </div>
             </div>

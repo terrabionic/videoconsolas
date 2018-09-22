@@ -10,6 +10,11 @@ $component: '.nav-posts';
     top: -70px;
     transition: all 0.4s;
     width: 100vw;
+    z-index: 9;
+
+    @include mq($until: tablet) {
+        position: initial;
+    }
 
     &--sticky {
         opacity: 1;

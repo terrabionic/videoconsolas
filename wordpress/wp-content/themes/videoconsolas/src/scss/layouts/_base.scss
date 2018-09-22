@@ -1,6 +1,8 @@
 html,
 body {
+    -webkit-overflow-scrolling: touch;
     height: 100%;
+    max-width: 100vw;
 }
 
 img {

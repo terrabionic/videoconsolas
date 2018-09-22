@@ -12,6 +12,10 @@ $layout: '.header';
         outline: none;
         padding: 0;
 
+        &:focus {
+            outline: none;
+        }
+
         &--opened {
             #{$layout}__burger-line {
                 display: none;

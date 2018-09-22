@@ -120,10 +120,12 @@ $layout: '.comments';
         width: 100%;
 
         &--input {
+            appearance: none;
             height: 40px;
         }
 
         &--textarea {
+            appearance: none;
             height: 100px;
         }
     }

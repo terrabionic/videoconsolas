@@ -6,15 +6,7 @@
 get_header();
 ?>
 
-<section class="container">
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="privacy__breadcrumbs">
-                <?php get_template_part('template-parts/breadcrumbs-section'); ?>
-            </div>
-        </div>
-    </div>
-</section>
+<?php get_template_part('template-parts/breadcrumbs-section'); ?>
 
 <section class="sitemap__content">
     <div class="container">

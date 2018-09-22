@@ -1,13 +1,7 @@
 <?php get_header(); ?>
-<section class="container">
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="e404__breadcrumbs">
-                <?php get_template_part('template-parts/breadcrumbs-section'); ?>
-            </div>
-        </div>
-    </div>
-</section>
+
+<?php get_template_part('template-parts/breadcrumbs-section'); ?>
+
 <!-- Hero -->
 <section class="hero404">
     <img src="<?= get_template_directory_uri(); ?>/dist/images/404-image@3x.png" class="hero404__space">

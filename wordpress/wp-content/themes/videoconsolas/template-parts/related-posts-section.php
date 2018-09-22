@@ -34,7 +34,7 @@ $query = new WP_Query($args);
 
                 while ($query->have_posts()) : $query->the_post();
                 ?>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6 col-sm-12 co-12">
                     <article id="post-<?php the_ID(); ?>" class="related-posts__article related-posts__article--<?= $colors[array_rand($colors)]; ?>">
                         <a href="<?= esc_url(get_permalink()); ?>" class="related-posts__article-link" rel="bookmark">
                             <?php the_post_thumbnail('related-thumbs', array('class' => 'related-posts__article-thumb')); ?>

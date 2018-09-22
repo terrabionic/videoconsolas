@@ -9,7 +9,7 @@
     ?>
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-6 col-sm-12 co-12">
                 <div class="nav-posts__social">
                     <ul class="nav-posts__list">
                         <li class="nav-posts__btn">
@@ -30,7 +30,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-6 col-sm-12 co-12">
                 <div class="nav-posts__buttons">
                     <ul class="nav-posts__list nav-posts__list--right">
                         <li class="nav-posts__btn">

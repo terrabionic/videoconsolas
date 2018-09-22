@@ -13,12 +13,20 @@ $layout: '.posts-list';
 
     &__switch-buttons {
         margin-right: 1.5em;
+
+        @include mq($until: tablet) {
+            display: none;
+        }
     }
 
     &__switch-divider {
         border-top: 1px solid $gray-light;
         margin-bottom: 2em;
         margin-top: 0;
+
+        @include mq($until: tablet) {
+            display: none;
+        }
     }
 
     &__switch-layout {
@@ -58,6 +66,10 @@ $layout: '.posts-list';
         overflow: hidden;
         transition: all 0.4s;
         width: 48.5%;
+
+        @include mq($until: tablet) {
+            width: 100%;
+        }
 
         &--large {
             display: flex;

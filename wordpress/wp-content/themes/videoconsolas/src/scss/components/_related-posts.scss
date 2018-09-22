@@ -12,6 +12,10 @@ $component: '.related-posts';
     &__article {
         background-color: $primary-color;
 
+        @include mq($until: tablet) {
+            margin-bottom: 1px;
+        }
+
         &--primary {
             background-color: $primary-color;
         }
@@ -38,6 +42,10 @@ $component: '.related-posts';
         height: auto;
         max-width: 174px;
         width: 100%;
+
+        @include mq($until: tablet) {
+            max-width: 130px;
+        }
     }
     
     &__caption {

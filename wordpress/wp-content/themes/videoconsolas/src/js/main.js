@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     /* Top bar when scrolling */
     if ($('.nav-posts').length > 0) {
-        $(window).scroll(function () {
+        $(window).scroll(function() {
             var navTopBar = $('.nav-posts'),
                 header = $('.header')
     
