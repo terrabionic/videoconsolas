@@ -2,7 +2,7 @@ $(document).ready(function () {
     /* JS breakpoints */
     var breakPoints = {
         mobile: 560,
-        tablet: 768,
+        tablet: 769,
     }
 
     var width = document.body.clientWidth

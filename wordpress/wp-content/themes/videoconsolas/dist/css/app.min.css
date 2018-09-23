@@ -13336,6 +13336,14 @@ a img.aligncenter {
     overflow: hidden;
   }
 
+  .e404__posts-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
   .related-posts {
     margin-left: -15px;
     margin-right: -15px;
