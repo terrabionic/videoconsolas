@@ -3,6 +3,11 @@ $component: '.related-posts';
 #{$component} {
     margin-bottom: 4em;
 
+    @include mq($until: mobile) {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
     &__title {
         font-size: 32px;
         margin-bottom: 1em;
@@ -44,7 +49,13 @@ $component: '.related-posts';
         width: 100%;
 
         @include mq($until: tablet) {
+            height: 130px;
             max-width: 130px;
+        }
+
+        @include mq($until: mobile) {
+            height: 160px;
+            max-width: 160px;
         }
     }
     

@@ -1,6 +1,7 @@
 $(document).ready(function () {
     /* JS breakpoints */
     var breakPoints = {
+        mobile: 560,
         tablet: 768,
     }
 
@@ -80,16 +81,32 @@ $(document).ready(function () {
         })
     }
 
+    /* Sidebar mobile trigger */
+    $('.sidebar__mobile-trigger').click(function (e) {
+
+        if (breakPoints.mobile > width) {
+            $(this).toggleClass('opened')
+            $('.sidebar__mobile-mask').toggleClass('opened')
+            
+            var sidebarHiehgt = $('.sidebar__mobile-container').outerHeight() + 50
+    
+            if ($('.sidebar__mobile-mask').hasClass('opened')) {
+                $('.sidebar__mobile-mask').animate({height: sidebarHiehgt})
+            } else {
+                $('.sidebar__mobile-mask').animate({height: 0})
+            }
+        }
+    })
+
     /* Footer menus */
     $('.footer__links-menu-title').click(function (e) {
         if (breakPoints.tablet > width) {
             $(this).toggleClass('opened')
-    
             $(this).next().toggleClass('opened')
+            
+            var menuHiehgt = $(this).next().find('ul').outerHeight()
     
             if ($(this).next().hasClass('opened')) {
-                var menuHiehgt = $(this).next().find('ul').outerHeight()
-    
                 $(this).next().animate({height: menuHiehgt})
             } else {
                 $(this).next().animate({height: 0})

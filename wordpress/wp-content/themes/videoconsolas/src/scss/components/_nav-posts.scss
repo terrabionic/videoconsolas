@@ -27,6 +27,11 @@ $component: '.nav-posts';
         margin: 0;
         padding: 0;
 
+        @include mq($until: mobile) {
+            border-bottom: 1px solid $gray-light;
+            justify-content: center;
+        }
+
         &--right {
             justify-content: flex-end;
         }

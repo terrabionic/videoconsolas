@@ -2,6 +2,61 @@ $layout: '.sidebar';
 
 #{$layout} {
 
+    @include mq($until: mobile) {
+        margin-top: -2em;
+    }
+
+    &__mobile-trigger {
+        background-color: $secondary-color;
+        border: none;
+        color: $white;
+        cursor: pointer;
+        font-size: 22px;
+        height: 50px;
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-bottom: 1em;
+        outline: none;
+        padding: 0 15px;
+        position: relative;
+        transition: all 0.4s;
+        text-align: left;
+        width: 100vw;
+
+        &:focus {
+            outline: none;
+        }
+
+        @include mq($from: mobile) {
+            display: none;
+        }
+
+        &:before {
+            color: $white;
+            content: '+';
+            font-size: 1.8em;
+            font-weight: 200;
+            position: absolute;
+            right: 0.5em;
+            top: -0.1em;
+        }
+
+        &.opened {
+            background-color: $primary-color;
+
+            &::before {
+                content: '–';
+            }
+        }
+    }
+
+    &__mobile-mask {
+        @include mq($until: mobile) {
+            height: 0;
+            overflow: hidden;
+        }
+    }
+
     &__topics {
         margin-bottom: 2em;
     }

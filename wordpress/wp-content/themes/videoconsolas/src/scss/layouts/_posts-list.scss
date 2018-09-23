@@ -4,6 +4,10 @@ $layout: '.posts-list';
     &__header {
         display: flex;
         margin-bottom: 1.5em;
+
+        @include mq($until: mobile) {
+            display: none;
+        }
     }
 
     &__title {
