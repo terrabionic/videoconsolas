@@ -1,4 +1,18 @@
 $(document).ready(function () {
+    /* JS breakpoints */
+    var breakPoints = {
+        tablet: 768,
+    }
+
+    var width = document.body.clientWidth
+    var height = document.body.clientHeight
+
+    var onresize = function() {
+        width = document.body.clientWidth
+        height = document.body.clientHeight
+    }
+
+    window.addEventListener('resize', onresize)
 
     /* Top bar when scrolling */
     if ($('.nav-posts').length > 0) {
@@ -66,4 +80,20 @@ $(document).ready(function () {
         })
     }
 
+    /* Footer menus */
+    $('.footer__links-menu-title').click(function (e) {
+        if (breakPoints.tablet > width) {
+            $(this).toggleClass('opened')
+    
+            $(this).next().toggleClass('opened')
+    
+            if ($(this).next().hasClass('opened')) {
+                var menuHiehgt = $(this).next().find('ul').outerHeight()
+    
+                $(this).next().animate({height: menuHiehgt})
+            } else {
+                $(this).next().animate({height: 0})
+            }
+        }
+    })
 })

@@ -19,46 +19,52 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 col-md-4">
                                 <h5 class="footer__links-menu-title">
                                     <?= esc_html__('TEMAS', constant('DOMAIN_NAME')); ?>
                                 </h5>
-                                <?php
-                                wp_nav_menu(array(
-                                    'theme_location' => 'footer-menu-1',
-                                    'container' => false,
-                                    'items_wrap' => '<ul class="footer__links-menu list-unstyled">%3$s</ul>', )
-                                );
-                                ?>
+                                <div class="footer__links-menu-mask">
+                                    <?php
+                                    wp_nav_menu(array(
+                                        'theme_location' => 'footer-menu-1',
+                                        'container' => false,
+                                        'items_wrap' => '<ul class="footer__links-menu list-unstyled">%3$s</ul>', )
+                                    );
+                                    ?>
+                                </div>
                             </div>
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 col-md-4">
                                 <h5 class="footer__links-menu-title">
                                     <?= esc_html__('NOSOTROS', constant('DOMAIN_NAME')); ?>
                                 </h5>
-                                <?php
-                                wp_nav_menu(array(
-                                    'theme_location' => 'footer-menu-2',
-                                    'container' => false,
-                                    'items_wrap' => '<ul class="footer__links-menu list-unstyled">%3$s</ul>', )
-                                );
-                                ?>
+                                <div class="footer__links-menu-mask">
+                                    <?php
+                                    wp_nav_menu(array(
+                                        'theme_location' => 'footer-menu-2',
+                                        'container' => false,
+                                        'items_wrap' => '<ul class="footer__links-menu list-unstyled">%3$s</ul>', )
+                                    );
+                                    ?>
+                                </div>
                             </div>
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 col-md-4">
                                 <h5 class="footer__links-menu-title footer__links-title">
                                     <?= esc_html__('AYUDA', constant('DOMAIN_NAME')); ?>
                                 </h5>
-                                <?php
-                                wp_nav_menu(array(
-                                    'theme_location' => 'footer-menu-3',
-                                    'container' => false,
-                                    'items_wrap' => '<ul class="footer__links-menu list-unstyled">%3$s</ul>', )
-                                );
-                                ?>
+                                <div class="footer__links-menu-mask">
+                                    <?php
+                                    wp_nav_menu(array(
+                                        'theme_location' => 'footer-menu-3',
+                                        'container' => false,
+                                        'items_wrap' => '<ul class="footer__links-menu list-unstyled">%3$s</ul>', )
+                                    );
+                                    ?>
+                                </div>
                             </div>
                         </div>
                         <hr class="footer__links-separator">
                         <div class="row">
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 col-md-5">
                                 <h4 class="footer__links-section-title">
                                     <?= esc_html__('SÍGUENOS', constant('DOMAIN_NAME')); ?>
                                 </h4>
@@ -90,7 +96,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-lg-8">
+                            <div class="col-lg-8 col-md-7">
                                 <h4 class="footer__links-section-title">
                                     <?= esc_html__('Unete a la comunidad', constant('DOMAIN_NAME')); ?>
                                 </h4>

@@ -7,10 +7,23 @@ $layout: '.footer';
         padding: 2.5em 0;
     }
 
+    &__logo-link {
+        display: block;
+
+        @include mq($until: tablet) {
+            margin-bottom: 2em;
+            text-align: center;
+        }
+    }
+
     &__links-separator {
         border-bottom: 1px solid $black-color;
         display: block;
         margin-bottom: 1.5em;
+
+        @include mq($until: tablet) {
+            display: none;
+        }
     }
 
     &__links-section-title {
@@ -18,6 +31,10 @@ $layout: '.footer';
         font-size: 22px;
         margin-bottom: 1.5em;
         position: relative;
+
+        @include mq($until: tablet) {
+            margin-top: 1em;
+        }
 
         &:before {
             background-color: $primary-color;
@@ -44,12 +61,60 @@ $layout: '.footer';
 
     &__links-menu {
         margin-bottom: 0.5em;
+
+        @include mq($until: tablet) {
+            padding-bottom: 1em;
+        }
     }
 
     &__links-menu-title {
         color: $white;
         font-size: 19px;
         margin-bottom: 0.8em;
+        outline: none;
+        position: relative;
+
+        &:focus,
+        &:hover {
+            outline: none;
+        }
+
+        @include mq($until: tablet) {
+            border-bottom: 2px solid $black-color;
+            cursor: pointer;
+            margin-bottom: 0.5em;
+            padding-bottom: 0.5em;
+        }
+
+        &:before {
+            transition: all 0.4s;
+
+            @include mq($until: tablet) {
+                color: $primary-color;
+                content: '+';
+                font-size: 1.8em;
+                font-weight: 200;
+                position: absolute;
+                right: 0;
+                top: -0.25em;
+            }
+        }
+
+        &.opened {
+            &:before {
+                @include mq($until: tablet) {
+                    color: $white;
+                    content: '–';
+                }
+            }
+        }
+    }
+
+    &__links-menu-mask {
+        @include mq($until: tablet) {
+            height: 0;
+            overflow: hidden;
+        }
     }
 
     &__links-menu-link {
