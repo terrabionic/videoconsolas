@@ -12,6 +12,15 @@ function banner_sidebar_widgets_init() {
 		'before_title'  => '',
 		'after_title'   => '',
 	) );
+
+    register_sidebar( array(
+        'name'          => 'Banner for sidebar mobile',
+        'id'            => 'banner_sidebar_mobile',
+        'before_widget' => '<div class="banner-sidebar__container banner-sidebar__container--mobile">',
+        'after_widget'  => '</div>',
+        'before_title'  => '',
+        'after_title'   => '',
+    ) );
 }
 add_action( 'widgets_init', 'banner_sidebar_widgets_init' );
 
@@ -28,6 +37,16 @@ function banner_sidebar2_widgets_init() {
 		'before_title'  => '',
 		'after_title'   => '',
 	) );
+
+    register_sidebar( array(
+        'name'          => 'Banner for sidebar 2 mobile',
+        'id'            => 'banner_sidebar2_mobile',
+        'before_widget' => '<div class="banner-sidebar__container banner-sidebar__container--mobile">',
+        'after_widget'  => '</div>',
+        'before_title'  => '',
+        'after_title'   => '',
+    ) );
 }
 add_action( 'widgets_init', 'banner_sidebar2_widgets_init' );
+
 ?>

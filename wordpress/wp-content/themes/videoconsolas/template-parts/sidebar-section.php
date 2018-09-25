@@ -9,6 +9,7 @@
             <?php if ( is_active_sidebar('banner_sidebar') ) : ?>
             <div class="banner-sidebar">
                 <?php dynamic_sidebar('banner_sidebar'); ?>
+                <?php dynamic_sidebar('banner_sidebar_mobile'); ?>
             </div>
             <?php endif; ?>
             <!-- End banner sidebar -->
@@ -37,6 +38,7 @@
             <?php if ( is_active_sidebar('banner_sidebar2') ) : ?>
             <div class="banner-sidebar">
                 <?php dynamic_sidebar('banner_sidebar2'); ?>
+                <?php dynamic_sidebar('banner_sidebar2_mobile'); ?>
             </div>
             <?php endif; ?>
             <!-- End banner sidebar -->
