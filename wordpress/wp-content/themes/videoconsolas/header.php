@@ -26,6 +26,60 @@
                     ?>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-12">
+                    <?php
+                    $facebookLink = get_field('facebook_link', 'option');
+                    $twitterLink = get_field('twitter_link', 'option');
+                    $youtubeLink = get_field('youtube_link', 'option');
+                    $instagramLink = get_field('instagram_link', 'option');
+                    $googlePlusLink = get_field('google_plus_link', 'option');
+                    ?>
+                    <ul class="mobile-menu__links-social list-inline">
+                        <?php
+                        if (!empty($facebookLink)) {
+                            ?>
+                            <li class="mobile-menu__links-social-item list-inline-item">
+                                <a href="<?= $facebookLink ?>" class="mobile-menu__links-social-link">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                        <?php }
+                        if (!empty($twitterLink)) {
+                            ?>
+                            <li class="mobile-menu__links-social-item list-inline-item">
+                                <a href="<?= $twitterLink ?>" class="mobile-menu__links-social-link">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                        <?php }
+                        if (!empty($youtubeLink)) {
+                            ?>
+                            <li class="mobile-menu__links-social-item list-inline-item">
+                                <a href="<?= $youtubeLink ?>" class="mobile-menu__links-social-link">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                        <?php }
+                        if (!empty($instagramLink)) {
+                            ?>
+                            <li class="mobile-menu__links-social-item list-inline-item">
+                                <a href="<?= $instagramLink ?>" class="mobile-menu__links-social-link">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                        <?php }
+                        if (!empty($googlePlusLink)) {
+                            ?>
+                            <li class="mobile-menu__links-social-item list-inline-item">
+                                <a href="<?= $googlePlusLink ?>" class="mobile-menu__links-social-link">
+                                    <i class="fab fa-google-plus-g"></i>
+                                </a>
+                            </li>
+                        <?php }                                    ?>
+                    </ul>
+                </div>
+            </div>
         </div>
     </nav>
     <!-- End mobile menu -->

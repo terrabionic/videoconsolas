@@ -1,9 +1,9 @@
     <!-- Hero -->
-    <section class="hero">
+    <section class="hero" style="background-image:url(<?= get_field( 'background_hero_section', 'option' ); ?>">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="hero__sentence">Tagline / <span class="hero__sub-sentence">slogan</span></p>
+                    <p class="hero__sentence"><?= get_field('slogan_part_1', 'option') ?> / <span class="hero__sub-sentence"><?= get_field('slogan_part_2', 'option') ?></span></p>
                 </div>
             </div>
             <div class="row">

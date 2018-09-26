@@ -4,7 +4,7 @@
                 <div class="row">
                     <div class="col-lg-3">
                         <a href="#" class="footer__logo-link" title="<?php bloginfo('name'); ?>">
-                            <img src="<?= get_template_directory_uri(); ?>/dist/images/footer-logotype.svg" class="footer__logo" />
+                            <img src="<?= get_field('logo_footer', 'option');?>" class="footer__logo" />
                         </a>
                     </div>
                     <div class="col-lg-9">
@@ -68,32 +68,55 @@
                                 <h4 class="footer__links-section-title">
                                     <?= esc_html__('SÍGUENOS', constant('DOMAIN_NAME')); ?>
                                 </h4>
+                                <?php
+                                $facebookLink = get_field('facebook_link', 'option');
+                                $twitterLink = get_field('twitter_link', 'option');
+                                $youtubeLink = get_field('youtube_link', 'option');
+                                $instagramLink = get_field('instagram_link', 'option');
+                                $googlePlusLink = get_field('google_plus_link', 'option');
+                                ?>
                                 <ul class="footer__links-social list-inline">
+                                    <?php
+                                    if (!empty($facebookLink)) {
+                                    ?>
                                     <li class="footer__links-social-item list-inline-item">
-                                        <a href="#" class="footer__links-social-link">
+                                        <a href="<?= $facebookLink ?>" class="footer__links-social-link">
                                             <i class="fab fa-facebook-f"></i>
                                         </a>
                                     </li>
+                                    <?php }
+                                    if (!empty($twitterLink)) {
+                                    ?>
                                     <li class="footer__links-social-item list-inline-item">
-                                        <a href="#" class="footer__links-social-link">
+                                        <a href="<?= $twitterLink ?>" class="footer__links-social-link">
                                             <i class="fab fa-twitter"></i>
                                         </a>
                                     </li>
+                                    <?php }
+                                    if (!empty($youtubeLink)) {
+                                    ?>
                                     <li class="footer__links-social-item list-inline-item">
-                                        <a href="#" class="footer__links-social-link">
+                                        <a href="<?= $youtubeLink ?>" class="footer__links-social-link">
                                             <i class="fab fa-youtube"></i>
                                         </a>
                                     </li>
+                                    <?php }
+                                    if (!empty($instagramLink)) {
+                                    ?>
                                     <li class="footer__links-social-item list-inline-item">
-                                        <a href="#" class="footer__links-social-link">
+                                        <a href="<?= $instagramLink ?>" class="footer__links-social-link">
                                             <i class="fab fa-instagram"></i>
                                         </a>
                                     </li>
+                                    <?php }
+                                    if (!empty($googlePlusLink)) {
+                                    ?>
                                     <li class="footer__links-social-item list-inline-item">
-                                        <a href="#" class="footer__links-social-link">
+                                        <a href="<?= $googlePlusLink ?>" class="footer__links-social-link">
                                             <i class="fab fa-google-plus-g"></i>
                                         </a>
                                     </li>
+                                    <?php }                                    ?>
                                 </ul>
                             </div>
                             <div class="col-lg-8 col-md-7">

@@ -19,7 +19,7 @@ $layout: '.mobile-menu';
 
     &__list {
         list-style: none;
-        margin: 0;
+        margin: 0 0 2em 0;
         padding: 0 0.2em;
     }
 
@@ -116,6 +116,24 @@ $layout: '.mobile-menu';
         &:hover {
             color: $white;
             text-decoration: none;
+        }
+    }
+
+    &__links-social-link {
+        border: 1px solid $white;
+        color: $white;
+        display: block;
+        font-size: 18px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        transition: all 0.4s;
+        width: 36px;
+
+        &:focus,
+        &:hover {
+          border: 1px solid $primary-color;
+          color: $primary-color;
         }
     }
 }
