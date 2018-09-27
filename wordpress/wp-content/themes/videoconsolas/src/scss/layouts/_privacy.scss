@@ -1,8 +1,9 @@
 $layout: '.privacy';
 
 #{$layout} {
-    &__breadcrumbs {
-        margin-bottom: 2.5em;
-        padding: 0.5em 0;
+    &__content {
+        @include mq($until: mobile) {
+            padding-top: 2em;
+        }
     }
 }

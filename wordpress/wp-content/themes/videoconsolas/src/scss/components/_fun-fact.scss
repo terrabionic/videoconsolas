@@ -26,6 +26,10 @@ $component: '.fun-fact';
         height: 32px;
         margin-right: 0.7em;
         width: 32px;
+
+        @include mq($until: mobile) {
+            margin-left: 1em;
+        }
     }
 
     &__title {
@@ -54,6 +58,10 @@ $component: '.fun-fact';
         strong {
             color: $primary-color;
             font-weight: 500;
+        }
+
+        @include mq($until: mobile) {
+            padding: 1em;
         }
     }
 }

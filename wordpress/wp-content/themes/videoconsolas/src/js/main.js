@@ -84,7 +84,7 @@ $(document).ready(function () {
     /* Sidebar mobile trigger */
     $('.sidebar__mobile-trigger').click(function (e) {
 
-        if (breakPoints.mobile > width) {
+        if (breakPoints.tablet > width) {
             $(this).toggleClass('opened')
             $('.sidebar__mobile-mask').toggleClass('opened')
             

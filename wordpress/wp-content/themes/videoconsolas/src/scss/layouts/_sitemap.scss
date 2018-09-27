@@ -6,6 +6,12 @@ $layout: '.sitemap';
         max-width: 890px;
     }
 
+    &__content {
+        @include mq($until: mobile) {
+            padding-top: 2em;
+        }
+    }
+
     &__menu-list {
         list-style: none;
         margin: 0;

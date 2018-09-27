@@ -24,6 +24,10 @@ $layout: '.e404';
 
         &:not(:last-child) {
             border-right: 1px solid $gray-light;
+            
+            @include mq($until: mobile) {
+                border: none;
+            }
         }
     }
 

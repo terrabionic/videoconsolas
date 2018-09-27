@@ -13,22 +13,26 @@ $layout: '.sidebar';
         cursor: pointer;
         font-size: 22px;
         height: 50px;
-        margin-left: -15px;
-        margin-right: -15px;
         margin-bottom: 1em;
         outline: none;
         padding: 0 15px;
         position: relative;
         transition: all 0.4s;
         text-align: left;
-        width: 100vw;
+        width: 100%;
 
         &:focus {
             outline: none;
         }
 
-        @include mq($from: mobile) {
+        @include mq($from: tablet) {
             display: none;
+        }
+
+        @include mq($until: mobile) {
+            margin-left: -15px;
+            margin-right: -15px;
+            width: 100vw;
         }
 
         &:before {
@@ -51,7 +55,7 @@ $layout: '.sidebar';
     }
 
     &__mobile-mask {
-        @include mq($until: mobile) {
+        @include mq($until: tablet) {
             height: 0;
             overflow: hidden;
         }

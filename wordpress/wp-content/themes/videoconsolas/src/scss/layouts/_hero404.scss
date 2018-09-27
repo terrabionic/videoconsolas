@@ -48,6 +48,8 @@ $layout: '.hero404';
     }
 
     &__search-btn {
+        appearance: none;
+        background-color: $white; 
         background-image: url(../images/search-icon.svg);
         background-position: center;
         background-repeat: no-repeat;
