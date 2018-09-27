@@ -7763,6 +7763,7 @@ a img.aligncenter {
 .header__nav-item {
   height: 70px;
   line-height: 70px;
+  list-style: none;
   margin-right: 0;
   position: relative;
 }
@@ -8752,11 +8753,19 @@ a img.aligncenter {
   transition: all 0.4s;
 }
 
+.footer__links-menu-item {
+  list-style: none;
+}
+
 .footer__links-menu-link {
   color: #fff;
   font-size: 18px;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+}
+
+.footer__links-menu-link:active {
+  color: #fff;
 }
 
 .footer__links-menu-link:hover,
@@ -9409,7 +9418,10 @@ a img.aligncenter {
 }
 
 .share-post__image {
+  height: auto;
+  margin: 0 auto;
   margin-bottom: 1em;
+  max-width: 200px;
 }
 
 .share-post__buttons {

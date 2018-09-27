@@ -7,7 +7,10 @@ $component: '.share-post';
     margin-bottom: 3em;
 
     &__image {
+        height: auto;
+        margin: 0 auto;
         margin-bottom: 1em;
+        max-width: 200px;
     }
 
     &__buttons {

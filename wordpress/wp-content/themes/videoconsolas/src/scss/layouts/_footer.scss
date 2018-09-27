@@ -117,10 +117,18 @@ $layout: '.footer';
         }
     }
 
+    &__links-menu-item {
+        list-style: none;
+    }
+
     &__links-menu-link {
         color: $white;
         font-size: 18px;
         transition: all 0.4s;
+
+        &:active {
+            color: $white;
+        }
 
         &:hover,
         &:focus {
