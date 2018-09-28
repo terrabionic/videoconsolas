@@ -7811,6 +7811,7 @@ a img.aligncenter {
 .header__nav-item--child {
   height: auto;
   line-height: normal;
+  list-style: none;
 }
 
 .header__nav-item--child:not(:first-child) {
