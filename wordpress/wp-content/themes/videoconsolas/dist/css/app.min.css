@@ -7763,7 +7763,7 @@ a img.aligncenter {
 .header__nav-item {
   height: 70px;
   line-height: 70px;
-  list-style: none;
+  list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
   margin-right: 0;
   position: relative;
 }
@@ -7811,7 +7811,7 @@ a img.aligncenter {
 .header__nav-item--child {
   height: auto;
   line-height: normal;
-  list-style: none;
+  list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
 }
 
 .header__nav-item--child:not(:first-child) {
