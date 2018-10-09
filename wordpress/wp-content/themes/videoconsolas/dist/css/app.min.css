@@ -13371,6 +13371,10 @@ a img.aligncenter {
     display: none;
   }
 
+  .content {
+    overflow: hidden;
+  }
+
   .sidebar {
     margin-top: -2em;
   }

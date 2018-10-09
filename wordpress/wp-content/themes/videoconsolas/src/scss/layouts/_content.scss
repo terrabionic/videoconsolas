@@ -3,6 +3,10 @@ $layout: '.content';
 #{$layout} {
     padding-bottom: 2em;
 
+    @include mq($until: mobile) {
+      overflow: hidden;
+    }
+
     &__container {
         margin: 0 auto;
         max-width: 890px;
